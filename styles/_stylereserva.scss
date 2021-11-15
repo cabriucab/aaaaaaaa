@@ -1,0 +1,144 @@
+
+.container{
+
+	margin-top: 5rem;
+}
+
+.reservas{
+margin: 4rem 2rem;
+align-items: flex-end;
+
+}
+.tituloReserva{
+	color: wheat;
+text-align: center;
+margin-bottom: 4rem;
+
+}
+
+.formularioContacto {
+
+	background-image: url(../img/106703453_3124802914264463_842023457542090694_n.jpg);
+	background-size: cover;
+	box-shadow: 0px 0px 20px 0px;
+	border-radius: 1.5rem;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 2rem;
+	
+
+}
+.renglon{
+margin-top: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.form-label{
+padding-left: 2rem;
+font-size: 2.5rem;
+width: 50%; 
+color: wheat;
+text-align: left;
+}
+.btn-success{
+
+background-color: white;
+color: black;
+&:hover{
+
+	background-color: black;
+	color: white;
+}
+
+}
+
+.form-control, .form-select {
+	font-size: 2rem;
+padding-right: 3rem;
+box-shadow: 0 0 10px 0;
+width: 55%; 
+margin: 0 auto!important;
+
+}
+.botones{
+display: flex;
+flex-direction: row;
+justify-content: center;
+width: 100%;
+
+
+input{
+	font-size: 2rem;
+margin-top: 3rem;
+	border-radius: 15px;
+	box-shadow: 0 0 20px 0;
+	margin-bottom: 1rem;
+
+}
+}
+
+
+.datosDeContacto {
+	
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 2rem;
+}
+.mapa {
+	margin-top: 2rem;
+}
+.iconoWhastapp {
+	img {
+		width: 4rem;
+	}
+}
+
+@media (max-width:768px) {
+
+	.reservas{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 4rem 0rem;
+	}
+
+	.formularioContacto {
+	align-items: center;
+	width: 98%;
+	margin-bottom: 3rem;
+	}
+
+	.form-label{
+		
+		font-size: 3rem;
+		color: white;
+	
+		}
+
+		#seleccion{
+
+			height: 50%;
+		}
+
+
+}
+
+@media (max-width:550px) {
+	
+	.tituloReserva{
+		color: wheat;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 4rem;
+	text-shadow:  black 1px 0 10px;
+	
+	}
+	
+	.form-label{
+		
+		font-size: 2rem;
+	
+		}
+}

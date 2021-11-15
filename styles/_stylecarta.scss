@@ -1,0 +1,75 @@
+
+.tituloNuestraCarta {
+	text-align: center;
+	background-image: url(../img/106684277_677974652933222_8314330202921990463_n.jpg);
+	//background-image: url(../img/106915055_140899924283854_6127364883543327017_n.jpg);
+	background-size: cover;
+	background-position: center center;
+	height: 250px;
+	margin-top: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	h2 {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 7rem;
+		text-align: center;
+		text-shadow:  black 1px 0 20px;
+		color: white;
+	}
+}
+.seccioncarta {
+	margin: auto;
+}
+.nuestraCarta {
+	border-radius: 3px;
+	margin: 3rem auto;
+	width: 60%;
+	
+}
+.accordion-item {
+	margin-top: 2rem;
+	border-radius: 40px;
+}
+.accordion-button {
+	box-shadow: 0 0 20px 0;
+	font-family: 'Jost', sans-serif;
+	font-size: 2.5rem;
+	text-align: center;
+	border-radius: 40px;
+	&:hover {
+		animation: aparecer 2s;
+		background-color: black;
+		color: white;
+	}
+}
+.detalleItemCarta {
+	text-align: center;
+	h3 {
+		font-size: 3rem;
+	}
+	h4 {
+		a {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+			text-decoration: none;
+			font-size: 2rem;
+			color: rgb(228, 193, 80);
+		}
+	}
+	hr {
+		margin-bottom: 3rem;
+	}
+
+
+
+}
+
+
+
+@media (max-width:550px) {
+
+.nuestraCarta {
+	width: 80%;
+}
+}

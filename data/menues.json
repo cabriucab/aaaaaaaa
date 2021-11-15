@@ -1,0 +1,18 @@
+[
+{"id":"1","descripcion":"MILANESA ESPECIAL","categoria":"MILANESA","precio":"850","imagen":"./img/220031039_1265939370522195_2796658623987876354_n.jpg","total":"0", "cantidad":"1"},
+{"id":"4","descripcion":"LOMO PULPERIA","categoria":"PIZZAS Y LOMOS","precio":"700","imagen":"./img/103175908_180492166766871_9105808135304215176_n.jpg","total":"0", "cantidad":"1"},
+{"id":"5","descripcion":"LOMO CON CHIMICHURRI","categoria":"PIZZAS Y LOMOS","precio":"700","imagen":"./img/103534535_107025601051049_6797577936557254963_n.jpg","total":"0", "cantidad":"1"},
+{"id":"6","descripcion":"PIZZA ESPECIAL","categoria":"PIZZAS Y LOMOS","precio":"800","imagen":"./img/122608623_640040366681130_3677132143910251004_n.jpg","total":"0", "cantidad":"1"},
+{"id":"7","descripcion":"PIZZA CON PANCETA","categoria":"PIZZAS Y LOMOS","precio":"750","imagen":"./img/103335506_2449903811779982_4330305461776294943_n.jpg","total":"0", "cantidad":"1"},
+{"id":"8","descripcion":"SORRENTINOS DE SALMON AHUMADO","categoria":"PASTAS","precio":"900","imagen":"./img/120744213_103635658150474_4554310946122390485_n.jpg","total":"0", "cantidad":"1"},
+{"id":"9","descripcion":"CANELONES DE LA CASA","categoria":"PASTAS","precio":"680","imagen":"./img/120539989_385565735795491_6712082789280447867_n.jpg","total":"0", "cantidad":"1"},
+{"id":"10","descripcion":"RAVIOLES CON SALSA DE MAR","categoria":"PASTAS","precio":"1050","imagen":"./img/237088159_848217872747014_3804188945515627985_n.jpg","total":"0", "cantidad":"1"},
+{"id":"11","descripcion":"PICADA COMPLETA DE LA CASA","categoria":"PICADAS","precio":"1500","imagen":"./img/delicias1.jpg","total":"0", "cantidad":"1"},
+{"id":"12","descripcion":"CAZUELA DE MAR A LA CREMA","categoria":"PESCADOS Y MARISCOS","precio":"1450","imagen":"./img/160998244_227826192375540_3332882951453816585_n.jpg","total":"0", "cantidad":"1"},
+{"id":"13","descripcion":"RABAS A LA PROVENSAL","categoria":"PESCADOS Y MARISCOS","precio":"880","imagen":"./img/234416095_342339284254974_8670369199164034721_n.jpg","total":"0", "cantidad":"1"},
+{"id":"14","descripcion":"TRUCHA A LA PIMIENTA","categoria":"PESCADOS Y MARISCOS","precio":"990","imagen":"./img/WhatsApp Image 2021-09-04 at 15.01.19 (1).jpeg","total":"0", "cantidad":"1"},
+{"id":"15","descripcion":"TAPA DE CUADRIAL AL HORNO","categoria":"CARNES","precio":"880","imagen":"./img/cardCena.jpg","total":"0", "cantidad":"1"},
+{"id":"16","descripcion":"VACIO AL HORNO DE BARRO","categoria":"CARNES","precio":"800","imagen":"./img/WhatsApp Image 2021-09-04 at 15.01.17 (2).jpeg","total":"0", "cantidad":"1"},
+{"id":"2","descripcion":"MILANESA NAPOLITANA","categoria":"MILANESA","precio":"800","imagen":"./img/WhatsApp Image 2021-09-04 at 15.01.22.jpeg","total":"0"},
+{"id":"3","descripcion":"MILANESA CON RUCULA Y JAMON CON QUESO","categoria":"MILANESA","precio":"900","imagen":"./img/WhatsApp Image 2021-09-04 at 15.01.21 (1).jpeg","total":"0", "cantidad":"1"}
+]

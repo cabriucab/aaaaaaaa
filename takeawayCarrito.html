@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant La Pulpería</title>
+    <meta type="description"
+        content="Realizá tu reserva, y comenzá a disfrutar de un lugar maravilloso, lleno de sabores.">
+    <meta type="keywords"
+        content="Pulpería Mendiolaza, restaurantes en cordoba, Restaurant, Mendiolaza, Pulpería, pulperia, pulperia mendiolaza, polo gastronomico, hamburguesas, comidas, casero, carnes, pasatas, pescados, pastas">
+    <meta rel="canonical" content="https://www.pulperiamendiolaza.com.ar">
+    <meta property="og:title" content="Restaurant Pulpería Mendiolaza">
+    <meta property="og:image"
+        content="https://www.pulperiamendiolaza.com.ar/img/103833634_255301082445857_6462337026877186153_n.jpg">
+    <meta property="og:description"
+        content="Pulpería Mendiolaza ofrece su carta con una gran variedad de opciones gastronómicas para que disfrutes de las diferentes alternativas a un excelente precio.">
+    <meta property="og:url" content="https://www.pulperiamendiolaza.com.ar">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styletakeaway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="./font.css">
+
+</head>
+
+
+<body>
+    <div class="contenedorPrincipal">
+        <header>
+            <div class="header__menuSuperior">
+                <h1 class="menuSuperior__titulo">Pulpería Mendiolaza</h1>
+
+                <div class="menuSuperior__menu">
+                    <div class="menu__logo">
+                        <a href="index.html"><img src="./img/103833634_255301082445857_6462337026877186153_n.jpg"
+                                alt="Logo pulpería Mendiolaza"></a>
+
+                    </div>
+
+                    <nav class="menu__navegador">
+                        <label for="menu" id="menu_btn">
+                            <img class="imagenHamburguesa" src="./img/icons8-menu-24.png"
+                                alt="Boton de despliegue de menú opciones">
+                        </label>
+                        <input type="checkbox" id="menu">
+
+                        <ul class="navegador__itemsDeMenu">
+                            <li class="itemsDeMenu__link"> <a href="./index.html">Home</a></li>
+                            <li class="itemsDeMenu__link"> <a href="./quienessomos.html">Quienes Somos</a></li>
+                            <li class="itemsDeMenu__link"> <a href="./takeaway.html">Delivery & Takeaway</a></li>
+                            <li class="itemsDeMenu__link"> <a href="nuestrascreaciones.html">Nuestras Creaciones</a>
+                                <ul class="sub-menu-carta">
+                                    <li class="sub-link"><a href="carnes.html">Carnes </a></li>
+                                    <li class="sub-link"><a href="pastas.html">Pastas </a></li>
+                                    <li class="sub-link"><a href="pescados.html">Pescados </a></li>
+                                    <li class="sub-link"><a href="lomos.html">Lomos y pizzas</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="itemsDeMenu__link"> <a href="./nuestrasdelicias.html">Nuestras Delicatessen</a>
+                            </li>
+                            <li class="itemsDeMenu__link"> <a href="./carta.html">Carta</a></li>
+                            <li class="itemsDeMenu__link"> <a href="./reservas.html">Reservas</a></li>
+
+                        </ul>
+                    </nav>
+
+                </div>
+
+            </div>
+            <div class="menutakeaway">
+                <!-- <div class="input-group mb-3 busqueda">
+                   // <input type="text" class="form-control " id="busquedaMenu">
+                   // <img id="iconoBusqueda" src="./img/icons8-search-24.png" alt="">
+                </div> -->
+
+                <div class="carrito"><img id="iconoCarrito" src="./img/icons8-shopping-cart-24.png" alt="">
+
+                </div>
+                <div id="botonNro"></div>
+            </div>
+    </div>
+    </header>
+
+    <div id="tituloTakeaway"></div>
+
+
+    <!-- para JS -->
+  
+  
+    <div id="contenedorCarrito"  class="col-9 container d-flex justify-content-center flex-wrap">
+
+
+    </div>
+  
+   
+
+
+    
+<div class="pie col-9 container d-flex justify-content-center flex-wrap">
+<div class="comentarios col-6 container d-flex justify-content-center flex-wrap">
+<p>¿Querés agregar una nota a tu pedido?</p>
+<textarea type="text" rows="5"  class="form-control" cols="40" rows="5" resize= "none"></textarea>
+</div>
+<div class="fecha col-6 container d-flex justify-content-center flex-wrap">
+<p>¿Fecha de delivery/takeout?</p>
+<input type="datetime-local"  class="form-control" id="hora" >
+<a href="#" class="btn btn-warning btnAgregar mt-5" >Finalizar compra</a>
+
+</div>
+
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+       
+        <script src="js/carrito.js"></script>
+
+
+    <footer>
+
+        <div class="footer__contacto">
+            <h3>Visitenos</h3>
+            <h4>Ruta intermunicipal esq. Camino a las Mercedes</h4>
+            <h4>Mendiolaza │ Córdoba │ Argentina</h4>
+            <a href="tel:3543551228">
+                <h4>Tel. +543543551228</h4>
+            </a>
+        </div>
+
+        <div class="footer__horarios">
+            <h3>Horarios</h3>
+            <h4>Martes a Domingos de 11 a 15 y de 18 a 24 hs</h4>
+            <h4>Lunes cerrado</h4>
+        </div>
+
+        <div class="footer__redesSociales">
+
+            <h3>Síguenos</h3>
+            <div class="social-bar">
+                <a href="#" class="icon icon-facebook" target="_blank"></a>
+                <a href="https://www.instagram.com/pulperiamendiolaza/?hl=es/" class="icon icon-instagram"
+                    target="_blank"></a>
+                <a href="#" class="icon icon-twitter" target="_blank"></a>
+                <a href="#" class="icon icon-youtube" target="_blank"></a>
+
+
+            </div>
+
+
+        </div>
+
+    </footer>
+
+    <div class="btn-whatsapp">
+        <a href="https://wa.me/543543551228" target="_blank">
+            <img src="./img/Icono-Whatsapp.png" alt="">
+        </a>
+    </div>
+
+    <div class="copyright">
+        &copy; Copyright <strong>Martín Cabrera</strong>. All Rights Reserved
+    </div>
+</body>
+
+</html>

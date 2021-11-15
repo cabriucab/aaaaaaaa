@@ -1,0 +1,465 @@
+#tituloTakeaway{
+
+    h1{
+text-align: center;
+text-shadow: 1px 1px 2px black;
+        margin-bottom: 3rem;
+margin-top: 3rem;
+font-size: 4rem;
+    }
+
+}
+
+
+#tituloTakeawayCarrito{
+
+    h1{
+text-align: center;
+text-shadow: 1px 1px 2px black;
+        margin-bottom: 3rem;
+margin-top: 3rem;
+font-size: 4rem;
+    }
+
+}
+
+#tituloPropiedades{
+
+    h1{
+text-align: center;
+        text-shadow: 2rem;
+        margin-bottom: 3rem;
+
+    }
+
+}
+
+
+
+.card{
+
+    box-shadow: 0rem 0rem 3rem 0rem;
+    margin:2rem 2rem 0rem 2rem;
+ 
+    
+}
+
+   .card-body{
+
+display: flex;
+flex-direction:column;
+align-items: center;
+
+
+}
+.form-control {
+
+font-size: 1.5rem !important;
+
+
+}
+.form-select {
+
+    font-size: 1.5rem !important;
+    
+    }
+
+#botonera{
+
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 3rem;
+
+
+
+}
+
+#principal{
+
+    display: flex;
+    justify-content: space-around;
+   
+    #contenedor{
+
+        border-style: solid;
+        border-width: thin;
+       border-color: grey;
+       margin: 0rem 2rem 0rem 1rem;
+
+    }
+   
+    #filtros{
+      
+margin: 0rem;
+display: flex;
+flex-direction: column;
+ 
+
+.cabeceraFiltro{
+    display: flex;
+justify-content: space-around;
+margin-bottom: 2rem;
+}
+.form-label{
+    margin-left: 0rem;
+    padding-left: 0rem;
+color: black;
+font-size: 1.5rem;
+
+}
+
+
+
+
+input{
+ margin-left: 2rem;
+margin-bottom: 1rem;
+
+
+}
+
+}
+
+}
+
+span{
+
+padding: 0rem;
+
+}
+
+#filtros{
+margin-left: 1rem;
+    padding-left:2rem ;
+    padding-right: 2rem;
+    border-style: solid;
+    border-width: thin;
+   border-color: grey;
+}
+
+
+.contenedorPrincipal{
+flex-direction: column;
+animation: aparecer 1s;
+
+
+}
+
+
+
+.menutakeaway{
+    width: 100%;
+background-color: white;
+display: flex;
+justify-content: flex-end;
+margin-top:2rem;
+margin-bottom: 2rem;
+
+#iconoBusqueda{
+width: 3rem;
+margin-left: 1.5rem;
+margin-right:5rem ;
+
+
+}
+#iconoCarrito{
+  
+
+    width: 2.5rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    
+}
+
+}
+.busqueda{
+    padding-left: 35rem;
+    
+    }
+
+    .filtrarPrecio1{
+width: 60%;
+margin-bottom: 3rem;
+
+
+    }
+
+    #botonNro{
+background: red;
+color: white;
+width: 15px;
+height: 15px;
+border-radius: 1000px;
+position: relative;
+
+top: -15px; left: -23px;
+
+h5{
+
+text-align: center;
+font-size: 1.2rem;
+
+}
+
+
+    }
+    .carrito{
+
+        margin-right: 4rem;
+    }
+
+
+.listaProducto{
+
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+
+    }
+
+    .encabezados{
+
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end;
+       
+       
+
+    }
+
+   .tituloEncabezado{
+
+    padding-left: 15rem;
+
+   }
+   .imagenTabla{
+width: 15rem;
+
+   }
+
+
+   #customers {
+    box-shadow: 0 0 2rem 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid rgb(248, 247, 247);
+    text-align: center;
+    color: rgb(7, 7, 7);
+font-size: 1.5rem;
+    padding: 8px;
+.btnBorrar{
+    width: 20px;
+    height: 20px;
+
+}
+    #cantidadMenues{
+        color: rgb(7, 7, 7);
+        text-align: center;
+        font-weight: bold;
+
+    }
+
+    #TotalItemMenu{
+
+        color: rgb(7, 7, 7);
+        text-align: center;
+        font-weight: bold;
+
+    }
+    
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: rgb(230, 227, 109);}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #dd7804;
+    color: rgb(7, 7, 7);
+  }
+
+  .comentarios{
+
+    display: flex;
+    flex-direction: column;
+   height: 20rem;
+   text-align: center;
+   font-size: 1.6rem;
+   font-weight: bold;
+ 
+
+  }
+
+.pie{
+margin-top: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+align-items: flex-start;
+
+}
+  .fecha{
+
+    display: flex;
+    flex-direction: column;
+   height: 20rem;
+   font-weight: bold;
+   
+   font-size: 1.6rem;
+
+   input{
+width: 100%;
+
+
+
+   }
+   a{
+font-size: 2.5rem;
+font-weight: bold;
+
+   }
+   .btn{
+
+      height: 60px;
+   }
+   #hora{
+
+font-size: 2rem;
+font-weight: bold;
+text-align: center;
+
+   }
+  }
+
+
+  .Subtotal{
+    border: 1px solid rgb(3, 3, 3);
+padding-top: 2rem;
+padding-bottom:2rem;
+
+  }
+
+  .tituloSubtot{
+    h2{
+
+        font-weight: bold;
+        text-align: center;
+    color: black;
+    font-size: 2rem;
+
+    }
+    
+
+
+  }
+
+  .sumaSubtot{
+
+font-size: 2rem;
+font-weight: bold;
+    text-align: right;
+    padding-right: 4rem;
+  }
+.Subtotal{
+
+
+    box-shadow: 0 0 2rem 0;
+
+}
+  
+
+
+.quantity {
+    position: relative;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button
+  {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number]
+  {
+    -moz-appearance: textfield;
+  }
+  
+  .quantity input {
+    width: 100px;
+    height: 42px;
+    line-height: 1.65;
+    float: left;
+    display: block;
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    border: 1px solid #eee;
+    color: black;
+    font-weight: bold;
+    
+    
+  }
+  
+  .quantity input:focus {
+    outline: 0;
+  }
+  
+  .quantity-nav {
+    float: left;
+    position: relative;
+    height: 40px;
+   
+  }
+  
+  .quantity-button {
+    position: relative;
+    cursor: pointer;
+    border-left: 1px solid #eee;
+    
+    width: 20px;
+    text-align: center;
+    color: #333;
+    font-size: 13px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+    line-height: 1.7;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+   
+  }
+  
+  .quantity-button.quantity-up {
+    position: absolute;
+    height: 50%;
+    top: 0px;
+    border-bottom: 1px solid #eee;
+    background-color: #dd7804;
+    color: black;
+    font-weight: bold;
+
+  }
+  
+  .quantity-button.quantity-down {
+    position: absolute;
+    bottom: 0px;
+    height: 50%;
+    color: black;
+    font-weight: bold;
+    background-color: #dd7804;
+   
+
+  }
