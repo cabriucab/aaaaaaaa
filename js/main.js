@@ -1,194 +1,65 @@
 
-const tituloPropiedades = document.getElementById("titulo");
-tituloPropiedades.innerHTML += `<h1>SISTEMA DE GESTION DE PROPIEDADES</h1>`
+//LLENADO DE STORAGE CON METODO GET
 
-
-const armadoWeb = () => {
-    let armado ="";
-
-    armado = `
-<div class="botonCargar">
-<a href="./carga.html" class="btn btn-primary" >CARGAR PROPIEDAD</a>
-</div>
-<div class="botonVer">
-<a href="./propiedades.html" class="btn btn-primary" >VER PROPIEDADES</a>
-</div>
-`
-
-contenedor.innerHTML = armado;
-
-}
-armadoWeb();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-jQuery(document).ready(function( $ ) {
-
-  // Header fixed and Back to top button
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
-      $('.back-to-top').fadeIn('slow');
-      $('#header').addClass('header-fixed');
-    } else {
-      $('.back-to-top').fadeOut('slow');
-      $('#header').removeClass('header-fixed');
-    }
-  });
-  $('.back-to-top').click(function(){
-    $('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
-    return false;
-  });
-
-  // Initiate the wowjs
-  new WOW().init();
-
-  // Initiate superfish on nav menu
-  $('.nav-menu').superfish({
-    animation: {opacity:'show'},
-    speed: 400
-  });
-
-  // Mobile Navigation
-  if( $('#nav-menu-container').length ) {
-    var $mobile_nav = $('#nav-menu-container').clone().prop({ id: 'mobile-nav'});
-    $mobile_nav.find('> ul').attr({ 'class' : '', 'id' : '' });
-    $('body').append( $mobile_nav );
-    $('body').prepend( '<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>' );
-    $('body').append( '<div id="mobile-body-overly"></div>' );
-    $('#mobile-nav').find('.menu-has-children').prepend('<i class="fa fa-chevron-down"></i>');
-
-    $(document).on('click', '.menu-has-children i', function(e){
-      $(this).next().toggleClass('menu-item-active');
-      $(this).nextAll('ul').eq(0).slideToggle();
-      $(this).toggleClass("fa-chevron-up fa-chevron-down");
-    });
-
-    $(document).on('click', '#mobile-nav-toggle', function(e){
-      $('body').toggleClass('mobile-nav-active');
-      $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-      $('#mobile-body-overly').toggle();
-    });
-
-    $(document).click(function (e) {
-      var container = $("#mobile-nav, #mobile-nav-toggle");
-      if (!container.is(e.target) && container.has(e.target).length === 0) {
-       if ( $('body').hasClass('mobile-nav-active') ) {
-          $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('#mobile-body-overly').fadeOut();
-        }
-      }
-    });
-  } else if ( $("#mobile-nav, #mobile-nav-toggle").length ) {
-    $("#mobile-nav, #mobile-nav-toggle").hide();
-  }
-
-  // Smoth scroll on page hash links
-  $('a[href*="#"]:not([href="#"])').on('click', function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-      var target = $(this.hash);
-      if (target.length) {
-        var top_space = 0;
-
-        if( $('#header').length ) {
-          top_space = $('#header').outerHeight();
-
-          if( ! $('#header').hasClass('header-fixed') ) {
-            top_space = top_space - 20;
-          }
-        }
-
-        $('html, body').animate({
-          scrollTop: target.offset().top - top_space
-        }, 1500, 'easeInOutExpo');
-
-        if ( $(this).parents('.nav-menu').length ) {
-          $('.nav-menu .menu-active').removeClass('menu-active');
-          $(this).closest('li').addClass('menu-active');
-        }
-
-        if ( $('body').hasClass('mobile-nav-active') ) {
-          $('body').removeClass('mobile-nav-active');
-          $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
-          $('#mobile-body-overly').fadeOut();
-        }
-        return false;
-      }
-    }
-  });
-
-  // Porfolio filter
-  $("#portfolio-flters li").click ( function() {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
-
-    var selectedFilter = $(this).data("filter");
-    $("#portfolio-wrapper").fadeTo(100, 0);
-
-    $(".portfolio-item").fadeOut().css('transform', 'scale(0)');
-
-    setTimeout(function() {
-      $(selectedFilter).fadeIn(100).css('transform', 'scale(1)');
-      $("#portfolio-wrapper").fadeTo(300, 1);
-    }, 300);
-  });
-
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000
-  });
-
-
-  //Google Map
-  var get_latitude = $('#google-map').data('latitude');
-  var get_longitude = $('#google-map').data('longitude');
-
-  function initialize_google_map() {
-    var myLatlng = new google.maps.LatLng(get_latitude, get_longitude);
-    var mapOptions = {
-      zoom: 14,
-      scrollwheel: false,
-      center: myLatlng
-    };
-    var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-    var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map
-    });
-  }
-  google.maps.event.addDomListener(window, 'load', initialize_google_map);
-
-// custom code
-
+$.get('data/menues.json',function(datos, estado){
+   
+   if(estado == 'success'){
+       for (const literal of datos) {
+        
+         comidas.push(new comida(parseInt(literal.id), literal.descripcion, literal.categoria, parseFloat(literal.precio), literal.imagen, parseFloat(literal.total), parseInt(literal.cantidad)));
+         }
+         localStorage.setItem('menues', JSON.stringify(comidas));
+   }
+  
+  
 });
+
+
+
+const armadoWeb = (almacenados) => {
+
+  
+
+   let acumulador = ""
+
+   almacenados.forEach(menu => {
+      acumulador += `
+           <div class="card mb-5" style="width: 28rem;">
+               <img src="${menu.imagen}" class="card-img-top mt-2" alt="...">
+               <div class="card-body">
+                   <h3 class="card-title">${menu.descripcion}</h3>
+                   <p class="card-text">${menu.categoria}</p>
+                   <h2 class="card-text ">$: ${menu.precio}</h2>
+                   <a href="#" ref=${menu.id} class="btn btn-warning btnAgregar" >Agregar a Carrito</a>
+               </div>
+           </div>
+                 
+   
+           `
+   })
+
+
+
+   
+
+const contarCarrito = (carrito) => {
+
+    botonNro.innerHTML = `
+    
+    <h5 id="nroCarrito"> ${carrito.length}</h5>
+    `
+  
+  }
+  
+   contarCarrito(carrito);
+   contenedor.innerHTML = acumulador;
+   
+   let botones = document.querySelectorAll(".btnAgregar")
+   botones.forEach(el=>{
+       el.addEventListener("click",agregarCarrito)
+      })
+}
+
+
+
+ 

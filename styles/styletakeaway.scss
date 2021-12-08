@@ -52,15 +52,21 @@ align-items: center;
 
 
 }
+
+.form-label2{
+  font-size: 1.5rem !important;
+
+
+}
 .form-control {
 
-font-size: 1.5rem !important;
+font-size: 1.3rem !important;
 
 
 }
 .form-select {
 
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
     
     }
 
@@ -323,7 +329,7 @@ width: 100%;
 
    }
    a{
-font-size: 2.5rem;
+font-size: 2.5rem ;
 font-weight: bold;
 
    }
@@ -463,3 +469,154 @@ font-weight: bold;
    
 
   }
+
+  #sumaModal{
+
+ box-shadow: 0 0 2rem 0;
+border: 1px solid;
+margin-top: 2rem;
+
+.totalModal{
+margin-top: 2rem;
+margin-bottom: 2rem;
+color: black;
+    font-weight: bold;
+    text-align: center;
+
+}
+  }
+
+  .imagenTablaModal{
+
+width: 5rem;
+height: 5rem;
+  }
+
+
+  .modal-dialog{
+//margin:auto !important;
+justify-items: center;
+
+  }
+ 
+  .modal-footer{
+justify-content: center !important;
+#btnCerrarModal{
+font-size: 1.8rem;
+font-weight: bold;
+}
+#btnFinalizarCompraModal{
+
+  font-size: 1.8rem;
+font-weight: bold;
+
+}
+  }
+
+  #detalleCompra{
+h3{
+margin: 3rem 0rem 1rem 0rem;
+
+
+}
+  }
+
+  .cuerpoModal{
+
+label{
+  font-size: 2rem;
+ }
+  }
+
+  .tablaModal{
+
+    th, td {
+      font-size: 10px !important;
+      font-weight: bold;
+      width: 100px;
+      word-wrap: break-word;
+  }
+
+  }
+
+  .btnFinalizarCompra{
+box-shadow: 0rem 0rem 2rem 0rem;
+    font-size: 30px !important;
+    font-weight: bold;
+
+
+  }
+
+  #busquedProducto{
+
+    width: 100%;
+    margin-bottom: 1rem !important;
+  }
+
+  #botonera{
+a{
+
+  width: 100% !important;
+  font-weight: bold !important;
+font-size: 1.5rem !important;
+
+}
+       
+    
+  }
+
+  .mimodal{
+
+padding-top: 0px !important;
+
+
+  }
+
+
+  .compraConfirmada{
+    text-align: center;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+
+  }
+.tarjetaDetalle{
+margin: 0rem;
+margin-top:2rem;
+width: 100%!important;
+}
+
+
+  .botonAcordeon{
+   text-decoration: none!important;
+   font-style: normal!important;
+    text-align: center;
+    color: black !important;
+    font-size: 1.4rem !important;
+    
+    &:hover {
+			color: black;
+			background-color: white;
+		}
+  }
+  #detalleFecha{
+p{
+
+  font-size: 1.5rem !important;
+
+}
+
+
+
+  }
+
+
+  #detalleCompraAcordeon{
+    p{
+    
+      font-size: 1.5rem !important;
+    
+    }
+    
+    
+    
+      }

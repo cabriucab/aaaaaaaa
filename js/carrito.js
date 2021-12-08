@@ -1,18 +1,18 @@
 
- let tituloPropiedades = document.getElementById("tituloTakeaway");
- tituloPropiedades.innerHTML += `<h1>Delivery & Takeaway</h1>`;
- 
- const contenedorCarrito = document.getElementById("contenedorCarrito");
 
- let total= 0;
- let carrito =  JSON.parse(localStorage.getItem("carrito")) || []
- const cantidadMenues = document.getElementById("cantidadMenues");
- const lblCantidad =document.getElementById("lblCantidad");
 
- const armadoWebCarrito =(carrito)=> {
-   let acumulador1 = "";
-   
-   acumulador1+=`<table id="customers">
+const cantidadMenues = document.getElementById("cantidadMenues");
+const lblCantidad = document.getElementById("lblCantidad");
+const detalleCompra = document.getElementById("detalleCompra");
+
+
+
+
+const armadoWebCarrito = (carrito) => {
+
+  let acumulador1 = "";
+
+  acumulador1 += `<table id="customers">
    <tr>
      <th>Producto</th>
      <th></th>
@@ -23,15 +23,15 @@
      <th></th>
    </tr>`
 
-   carrito.forEach(carro => {
-      acumulador1 += `
+  carrito.forEach(carro => {
+    acumulador1 += `
       
   
           <tr>
             <td> <img class="imagenTabla"src="${carro.imagen}" alt="..."></td>
             <td>${carro.nombre}</td>
             <td>${carro.categoria}</td>
-            <td>$${carro.precio}</td>
+            <td id=precioss>$${carro.precio}</td>
           
             <td> <div class="quantity">
             <input id=lblCantidad type="number" min="1" max="99" step="1" value=${carro.cantidad}>
@@ -50,103 +50,75 @@
           </tr>
           
        `
-   
-      
-   })
 
-   acumulador1+= `</table>
+
+  })
+
+  acumulador1 += `</table>
    <div class="Subtotal col-12 container d-flex justify-content-around flex-wrap">
   <div class="tituloSubtot col-9"><h2>Subtotal</h2></div>
-  <div class="sumaSubtot col-3">$${total}</div>
+  <div class="sumaSubtot col-3">$${sumarTotales()}</div>
    </div>
    
    `
-   contenedorCarrito.innerHTML=acumulador1;
-   btnBorrar = document.querySelectorAll(".btnBorrar");
-btnBorrar.forEach(el => el.addEventListener("click", borrarCarrito));
+  contenedorCarrito.innerHTML = acumulador1;
+  btnBorrar = document.querySelectorAll(".btnBorrar");
+  btnBorrar.forEach(el => el.addEventListener("click", borrarCarrito));
 
-  
+
 }
 
 
+armadoModal = (carrito) => {
+  $('#alerta').hide();
 
-const borrarCarrito = (e) =>{
- 
-  let ids = parseInt(e.target.getAttribute("ref"));
-  let seleccion = carrito.find(item => item.id === ids)
+ // $("#detalleCompra").prepend(`<h3>Detalle de pedido</h3>`);
 
-  let aux = carrito.filter(el => el.id !== seleccion.id)
+  carrito.forEach(carro => {
 
-  carrito = aux
-  localStorage.setItem("carrito",JSON.stringify(carrito))
 
-  armadoWebCarrito(carrito);
+    $("#detalleCompraAcordeon").append(`<table id="customers" class="tablaModal">
+    
+    <tr>
+    <td> <img class="imagenTablaModal"src="${carro.imagen}" alt="..."></td>
+    <td>${carro.nombre}</td>
+    <td> Cantidad: ${carro.cantidad}</td>
+    <td id="TotalItem">$${carro.total}</td>
+    
+  </tr>
+  `);
+  })
 
-  window.location.reload();
+  $("#sumaModal").html(`<h2 class="totalModal">Total a abonar $ ${sumarTotales()}</h2>`);
+  $("#detalleFecha").append(`<p> Fecha de pedido:<b> ${$('#hora').val()}</b></p>`);
+  $("#detalleFecha").append(`<p> Comentarios adicionales:<b> ${$("#comentario").val()}</b></p>`);
+
+
+
+  document.getElementById('hora').addEventListener('change', function () {
+
+    $('#hora').val($('#hora').val());
+    $("#detalleFecha").html(``);
+    $("#detalleFecha").append(`<p> Fecha de pedido:<b> ${$('#hora').val()}</b></p>`);
+    $("#detalleFecha").append(`<p> Comentarios adicionales:<b> ${$("#comentario").val()}</b></p>`);
+
+
+  });
+
+  document.getElementById('comentario').addEventListener('change', function () {
+    $("#detalleFecha").html(``);
+    $('#comentario').val($('#comentario').val())
+    $("#detalleFecha").append(`<p> Fecha de pedido: <b>${$('#hora').val()}</b></p>`);
+    $("#detalleFecha").append(`<p> Comentarios adicionales:<b> ${$("#comentario").val()}</b></p>`);
+
+  });
+
+
 }
-
-
-const sumarTotales=()=>{
-
-  
-  for(let ele of carrito) total+=ele.total;
-//console.log(total)
-}
-const contarCarrito=(carrito)=>{
-  
-  botonNro.innerHTML= `
-  
-  <h5 id="nroCarrito"> ${carrito.length}</h5>
-  `
-  
-  }
+armadoModal(carrito);
 
 
 
-  
-  function addCantidad(ref){
-    
-    let id = ref;
-   let buscarEnCarrito = carrito.findIndex(el => el.id == id)
-   carrito[buscarEnCarrito].cantidad += 1
-   carrito[buscarEnCarrito].total=carrito[buscarEnCarrito].cantidad*carrito[buscarEnCarrito].precio;
-   window.location.reload();
-     localStorage.setItem("carrito",JSON.stringify(carrito));
-  }
-
-  
-  function subCantidad(ref){
-    
-    let id = ref;
-   let buscarEnCarrito = carrito.findIndex(el => el.id == id)
-  
-  if(carrito[buscarEnCarrito].cantidad>1){
-    carrito[buscarEnCarrito].cantidad -= 1
-    carrito[buscarEnCarrito].total=carrito[buscarEnCarrito].cantidad*carrito[buscarEnCarrito].precio;
-   
-  }else{
-    let ids = parseInt(ref);
-    let seleccion = carrito.find(item => item.id === ids)
-  
-    let aux = carrito.filter(el => el.id !== seleccion.id)
-  
-    carrito = aux
-    localStorage.setItem("carrito",JSON.stringify(carrito))
-  
-    armadoWebCarrito(carrito);
-    
-
-  }
-
-  
-
-
-     localStorage.setItem("carrito",JSON.stringify(carrito));
-  }
-
-
-sumarTotales();
-contarCarrito(carrito);
 armadoWebCarrito(carrito);
 
 
@@ -154,38 +126,39 @@ armadoWebCarrito(carrito);
 // //BOTON VARIACION DE CANTIDAD EN JQUERY
 
 jQuery($(".quantity-nav"))
-   jQuery('.quantity').each(function() {
-    let spinner = jQuery(this),
+jQuery('.quantity').each(function () {
+  let spinner = jQuery(this),
     input = spinner.find('input[type="number"]'),
     btnUp = spinner.find('.quantity-up'),
     btnDown = spinner.find('.quantity-down'),
     min = input.attr('min'),
     max = input.attr('max'),
-    ref=btnUp.attr('ref');
-let newVal=0;
-let oldValue=0;
+    ref = btnUp.attr('ref');
+  let newVal = 0;
+  let oldValue = 0;
 
-  btnUp.click(function() {
+  btnUp.click(function () {
 
 
 
-     oldValue = parseFloat(input.val());
+    oldValue = parseFloat(input.val());
     if (oldValue >= max) {
-       newVal = oldValue;
+      newVal = oldValue;
     } else {
-       newVal = oldValue + 1;
+      newVal = oldValue + 1;
     }
     spinner.find("input").val(newVal);
     spinner.find("input").trigger("change");
-    
+
 
     addCantidad(ref);
+ 
   });
 
-  btnDown.click(function() {
-     oldValue = parseFloat(input.val());
+  btnDown.click(function () {
+    oldValue = parseFloat(input.val());
     if (oldValue <= min) {
-       newVal = oldValue;
+      newVal = oldValue;
     } else {
       newVal = oldValue - 1;
     }
@@ -196,6 +169,8 @@ let oldValue=0;
   });
 
 });
+
+
 
 
 
